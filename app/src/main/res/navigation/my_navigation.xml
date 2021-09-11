@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pdpappinroom.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_coursFragment"
+            app:destination="@id/coursFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_groupsListFragment"
+            app:destination="@id/groupsListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mentorListFragment"
+            app:destination="@id/mentorListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursFragment"
+        android:name="com.example.pdpappinroom.kurslar.CoursFragment"
+        android:label="fragment_cours"
+        tools:layout="@layout/fragment_cours" >
+        <action
+            android:id="@+id/action_coursFragment_to_coursAddFragment"
+            app:destination="@id/coursAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupsListFragment"
+        android:name="com.example.pdpappinroom.groupfragment.GroupsListFragment"
+        android:label="fragment_groups_list"
+        tools:layout="@layout/fragment_groups_list" >
+
+        <action
+            android:id="@+id/action_groupsListFragment_to_groupItemPagerFragment"
+            app:destination="@id/groupItemPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentorListFragment"
+        android:name="com.example.pdpappinroom.mentorfragment.MentorListFragment"
+        android:label="fragment_mentor_list"
+        tools:layout="@layout/fragment_mentor_list" >
+        <action
+            android:id="@+id/action_mentorListFragment_to_mentorFragment"
+            app:destination="@id/mentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursAddFragment"
+        android:name="com.example.pdpappinroom.kurslar.CoursAddFragment"
+        android:label="fragment_cours_add"
+        tools:layout="@layout/fragment_cours_add" >
+        <action
+            android:id="@+id/action_coursAddFragment_to_courseAboutFragment"
+            app:destination="@id/courseAboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseAboutFragment"
+        android:name="com.example.pdpappinroom.kurslar.CourseAboutFragment"
+        android:label="fragment_course_about"
+        tools:layout="@layout/fragment_course_about" />
+    <fragment
+        android:id="@+id/mentorFragment"
+        android:name="com.example.pdpappinroom.mentorfragment.MentorFragment"
+        android:label="fragment_mentor"
+        tools:layout="@layout/fragment_mentor" >
+        <action
+            android:id="@+id/action_mentorFragment_to_mentorAddFragment"
+            app:destination="@id/mentorAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentorAddFragment"
+        android:name="com.example.pdpappinroom.mentorfragment.MentorAddFragment"
+        android:label="fragment_mentor_add"
+        tools:layout="@layout/fragment_mentor_add" />
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.example.pdpappinroom.groupfragment.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" >
+
+        <action
+            android:id="@+id/action_groupFragment_to_groupAddFragment"
+            app:destination="@id/groupAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupAboutFragment"
+        android:name="com.example.pdpappinroom.groupfragment.GroupAboutFragment"
+        android:label="fragment_group_about"
+        tools:layout="@layout/fragment_group_about" />
+    <fragment
+        android:id="@+id/groupAddFragment"
+        android:name="com.example.pdpappinroom.groupfragment.GroupAddFragment"
+        android:label="fragment_group_add"
+        tools:layout="@layout/fragment_group_add" >
+        <action
+            android:id="@+id/action_groupAddFragment_to_groupAboutFragment"
+            app:destination="@id/groupAboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupItemPagerFragment"
+        android:name="com.example.pdpappinroom.groupfragment.GroupItemPagerFragment"
+        android:label="fragment_group_item_pager"
+        tools:layout="@layout/fragment_group_item_pager" >
+        <action
+            android:id="@+id/action_groupItemPagerFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+    </fragment>
+</navigation>
